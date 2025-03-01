@@ -3,92 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cycle du Paludisme</title>
+    <title>Cycle biologique de Plasmodium falciparum</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             background-color: #f4f4f4;
-            margin: 0;
             padding: 20px;
         }
-        h1 {
-            color: #2c3e50;
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            max-width: 900px;
+            margin: auto;
         }
-        .cycle-container {
+        h1 {
+            color: #4CAF50;
+        }
+        .schema {
             display: flex;
             justify-content: center;
+            align-items: center;
             flex-wrap: wrap;
-            gap: 20px;
+            position: relative;
+            width: 500px;
+            height: 500px;
+            margin: auto;
+            border-radius: 50%;
+            border: 2px solid #4CAF50;
+            position: relative;
         }
-        .stage {
-            width: 250px;
-            padding: 15px;
-            background: white;
+        .step {
+            position: absolute;
+            width: 120px;
+            padding: 10px;
+            background-color: white;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s;
-        }
-        .stage:hover {
-            transform: scale(1.1);
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            text-align: center;
         }
         .arrow {
-            font-size: 24px;
-            margin: 10px 0;
+            position: absolute;
+            width: 40px;
+            height: 40px;
         }
+        .step1 { top: 10px; left: 50%; transform: translateX(-50%); }
+        .step2 { top: 25%; right: 10px; }
+        .step3 { bottom: 25%; right: 10px; }
+        .step4 { bottom: 10px; left: 50%; transform: translateX(-50%); }
+        .step5 { bottom: 25%; left: 10px; }
+        .step6 { top: 25%; left: 10px; }
     </style>
 </head>
 <body>
-    <h1>Cycle Biologique du Plasmodium falciparum</h1>
-    <div class="cycle-container">
-        <div class="stage">
-            <h3>1. Piqûre par un moustique infecté</h3>
-            <p>Le moustique Anopheles femelle injecte des sporozoïtes dans la circulation sanguine de l'hôte humain lors de la piqûre.</p>
+    <div class="container">
+        <h1>Cycle biologique de Plasmodium falciparum</h1>
+        <div class="schema">
+            <div class="step step1">1️⃣ Piqûre du moustique 🦟</div>
+            <div class="step step2">2️⃣ Infection du foie 🏥</div>
+            <div class="step step3">3️⃣ Libération des mérozoïtes 🩸</div>
+            <div class="step step4">4️⃣ Infection des globules rouges ❤️</div>
+            <div class="step step5">5️⃣ Formation des gamétocytes 🍀</div>
+            <div class="step step6">6️⃣ Transmission au moustique 🔄</div>
         </div>
-        <div class="arrow">⬇️</div>
-        <div class="stage">
-            <h3>2. Sporozoïtes dans le foie</h3>
-            <p>Les sporozoïtes migrent vers le foie et envahissent les hépatocytes, où ils se multiplient de manière asexuée.</p>
-        </div>
-        <div class="arrow">⬇️</div>
-        <div class="stage">
-            <h3>3. Multiplication hépatique</h3>
-            <p>Dans le foie, les sporozoïtes se différencient en schizontes, qui éclatent et libèrent des milliers de mérozoïtes.</p>
-        </div>
-        <div class="arrow">⬇️</div>
-        <div class="stage">
-            <h3>4. Libération des mérozoïtes dans le sang</h3>
-            <p>Les mérozoïtes quittent le foie et pénètrent dans la circulation sanguine pour infecter les globules rouges.</p>
-        </div>
-        <div class="arrow">⬇️</div>
-        <div class="stage">
-            <h3>5. Infection des globules rouges</h3>
-            <p>Les mérozoïtes envahissent les érythrocytes, où ils se développent en trophozoïtes et schizontes, provoquant la lyse des cellules et la libération de nouveaux mérozoïtes.</p>
-        </div>
-        <div class="arrow">⬇️</div>
-        <div class="stage">
-            <h3>6. Formation des gamétocytes</h3>
-            <p>Certains parasites se transforment en gamétocytes (formes sexuées), qui seront ingérés par un moustique lors d'une nouvelle piqûre.</p>
-        </div>
-        <div class="arrow">⬇️</div>
-        <div class="stage">
-            <h3>7. Absorption par un moustique</h3>
-            <p>Dans l'intestin du moustique, les gamétocytes se transforment en gamètes, qui fusionnent pour donner un zygote, complétant ainsi le cycle.</p>
-        </div>
+
+        <h2>Description détaillée</h2>
+        <p><strong>Espèce concernée :</strong> <em>Plasmodium falciparum</em> est l’espèce de parasite responsable de la forme la plus sévère du paludisme.</p>
+        <p><strong>Vecteur :</strong> Le moustique <em>Anopheles</em>, actif principalement la nuit, transmet le parasite par piqûre.</p>
+        
+        <h3>Étape 1 - Piqûre du moustique infecté</h3>
+        <p>Lorsqu'un moustique femelle <em>Anopheles</em> infecté pique un humain, il injecte des <strong>sporozoïtes</strong> présents dans sa salive. Ces sporozoïtes sont la forme infectieuse du parasite.</p>
+        
+        <h3>Étape 2 - Migration vers le foie</h3>
+        <p>Les sporozoïtes voyagent par la circulation sanguine et atteignent le foie en quelques minutes. Là, ils envahissent les cellules hépatiques (hépatocytes) et se transforment en <strong>schizontes</strong>, un stade de développement où le parasite se multiplie de manière exponentielle.</p>
+        
+        <h3>Étape 3 - Libération des mérozoïtes</h3>
+        <p>Après plusieurs jours (généralement 7 à 10 jours), les schizontes éclatent, libérant des milliers de <strong>mérozoïtes</strong> dans la circulation sanguine. Ce stade marque le début de l'infection du sang.</p>
+        
+        <h3>Étape 4 - Infection des globules rouges</h3>
+        <p>Les mérozoïtes envahissent rapidement les globules rouges où ils subissent plusieurs cycles de multiplication. Chaque cycle dure environ 48 heures, entraînant la destruction des globules rouges infectés et la libération de nouveaux mérozoïtes. Ce phénomène provoque les symptômes typiques du paludisme : <strong>fièvre, frissons, anémie et fatigue</strong>.</p>
+        
+        <h3>Étape 5 - Formation des gamétocytes</h3>
+        <p>Certains mérozoïtes ne poursuivent pas leur cycle asexué mais se différencient en <strong>gamétocytes</strong>, la forme sexuée du parasite. Ces gamétocytes circulent dans le sang en attente d'être absorbés par un moustique.</p>
+        
+        <h3>Étape 6 - Transmission au moustique</h3>
+        <p>Lorsqu'un moustique pique une personne infectée, il absorbe les gamétocytes qui vont évoluer dans son intestin en <strong>sporozoïtes</strong>. Ceux-ci migreront vers ses glandes salivaires, prêts à être transmis à un nouvel hôte humain.</p>
+        
+        <h2>Conclusion</h2>
+        <p>Le cycle de <em>Plasmodium falciparum</em> est un processus complexe qui assure la propagation continue du parasite entre l'homme et le moustique. La compréhension de ce cycle est essentielle pour lutter contre le paludisme et développer des stratégies de prévention efficaces.</p>
     </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const stages = document.querySelectorAll(".stage");
-            let delay = 0;
-            
-            stages.forEach((stage, index) => {
-                setTimeout(() => {
-                    stage.style.backgroundColor = "#3498db";
-                    stage.style.color = "white";
-                }, delay);
-                delay += 1000;
-            });
-        });
-    </script>
 </body>
 </html>
