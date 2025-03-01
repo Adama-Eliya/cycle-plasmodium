@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cycle du Paludisme</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        .cycle-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .stage {
+            width: 250px;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+        .stage:hover {
+            transform: scale(1.1);
+        }
+        .arrow {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cycle Biologique du Plasmodium falciparum</h1>
+    <div class="cycle-container">
+        <div class="stage">
+            <h3>1. Piqûre par un moustique infecté</h3>
+            <p>Le moustique Anopheles femelle injecte des sporozoïtes dans la circulation sanguine de l'hôte humain lors de la piqûre.</p>
+        </div>
+        <div class="arrow">⬇️</div>
+        <div class="stage">
+            <h3>2. Sporozoïtes dans le foie</h3>
+            <p>Les sporozoïtes migrent vers le foie et envahissent les hépatocytes, où ils se multiplient de manière asexuée.</p>
+        </div>
+        <div class="arrow">⬇️</div>
+        <div class="stage">
+            <h3>3. Multiplication hépatique</h3>
+            <p>Dans le foie, les sporozoïtes se différencient en schizontes, qui éclatent et libèrent des milliers de mérozoïtes.</p>
+        </div>
+        <div class="arrow">⬇️</div>
+        <div class="stage">
+            <h3>4. Libération des mérozoïtes dans le sang</h3>
+            <p>Les mérozoïtes quittent le foie et pénètrent dans la circulation sanguine pour infecter les globules rouges.</p>
+        </div>
+        <div class="arrow">⬇️</div>
+        <div class="stage">
+            <h3>5. Infection des globules rouges</h3>
+            <p>Les mérozoïtes envahissent les érythrocytes, où ils se développent en trophozoïtes et schizontes, provoquant la lyse des cellules et la libération de nouveaux mérozoïtes.</p>
+        </div>
+        <div class="arrow">⬇️</div>
+        <div class="stage">
+            <h3>6. Formation des gamétocytes</h3>
+            <p>Certains parasites se transforment en gamétocytes (formes sexuées), qui seront ingérés par un moustique lors d'une nouvelle piqûre.</p>
+        </div>
+        <div class="arrow">⬇️</div>
+        <div class="stage">
+            <h3>7. Absorption par un moustique</h3>
+            <p>Dans l'intestin du moustique, les gamétocytes se transforment en gamètes, qui fusionnent pour donner un zygote, complétant ainsi le cycle.</p>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const stages = document.querySelectorAll(".stage");
+            let delay = 0;
+            
+            stages.forEach((stage, index) => {
+                setTimeout(() => {
+                    stage.style.backgroundColor = "#3498db";
+                    stage.style.color = "white";
+                }, delay);
+                delay += 1000;
+            });
+        });
+    </script>
+</body>
+</html>
